@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreMovieRequest extends FormRequest
+class UpdateMovieRequest extends FormRequest
 {
     public function authorize()
     {
@@ -19,7 +19,7 @@ class StoreMovieRequest extends FormRequest
             'sinopsis' => 'required|string',
             'tahun' => 'required|integer',
             'pemain' => 'required|string',
-            'foto_sampul' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'foto_sampul' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }
